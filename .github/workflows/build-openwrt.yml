@@ -81,7 +81,7 @@ jobs:
         sed -i '/exit/d' package/lean/default-settings/files/zzz-default-settings
         date=$(date -d "+8 hour" +"%y.%-m.%-d")
         cat << 'EOF' >> package/lean/default-settings/files/zzz-default-settings
-        sed -i "s/\(DISTRIB_REVISION='.*\)'/\1 Built by toy $date'/" /etc/openwrt_release
+        sed -i "s/\(DISTRIB_REVISION='.*\)'/\1 Built by wxw $date'/" /etc/openwrt_release
         
     - name: Load custom configuration
       run: |
