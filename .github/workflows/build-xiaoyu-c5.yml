@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: x86_x64.config
+  CONFIG_FILE: xiaoyu-c5.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
@@ -81,7 +81,7 @@ jobs:
         sed -i '/exit/d' package/lean/default-settings/files/zzz-default-settings
         date=$(date -d "+8 hour" +"%y.%-m.%-d")
         cat << 'EOF' >> package/lean/default-settings/files/zzz-default-settings
-        sed -i "s/\(DISTRIB_REVISION='.*\)'/\1 Built by wxw $date'/" /etc/openwrt_release
+        sed -i "s/\(DISTRIB_REVISION='.*\)'/\1 Built by WXW $date'/" /etc/openwrt_release
         
     - name: Load custom configuration
       run: |
